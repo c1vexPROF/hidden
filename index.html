@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-image: url(bg.jpg);
+background-size: 100%; color: black; font-family: arial; font-size: 30px;">
+<div>
+	<div style="">
+		<h3 class="flowertext">Цветок</h3>
+		<h3 class="planetext">Самолет</h3>
+		<h3 class="belkatext">Белка</h3>
+		<h3 class="appletext">Яблоко</h3>
+		<h3 style="position: absolute; top:5px; left:180px;">Очки:</h3>
+		<h3 class="score" style="position: absolute; top:75px; left:180px;color: white;">0</h3>
+	</div>
+	<div style="position: absolute; top:300px; left:1600px;" class="apple"><img src="apple.png" height="50" class="apple"></div>
+	<div style="position: absolute; top:0px; left:800px;" class="plane"><img src="plane.png" height="50" class="plane"></div>
+	<div style="position: absolute; top:800px; left:700px;" class="belka"><img src="belka.png" height="100" class="belka"></div>
+	<div style="position: absolute; top:1200px; left:1400px;" class="flower"><img src="flower.png" height="50" class="flower"></div>
+
+</div>
+</body>
+<script type="text/javascript">
+	let score=0;
+	document.querySelector(".score").innerHTML=score;
+	document.querySelector(".apple").onclick = function(){
+			alert("Нашел, молодец");
+			document.querySelector(".apple").style.display = "none";
+			document.querySelector(".appletext").style.textDecoration = "line-through";
+			score=score+1;
+			document.querySelector(".score").innerHTML = score;
+		}
+	document.querySelector(".plane").onclick = function(){
+			alert("Нашел, молодец");
+			document.querySelector(".plane").style.display = "none";
+			document.querySelector(".planetext").style.textDecoration = "line-through";
+			score=score+1;
+			document.querySelector(".score").innerHTML = score;
+		}
+	document.querySelector(".belka").onclick = function(){
+			alert("Нашел, молодец");
+			document.querySelector(".belka").style.display = "none";
+			document.querySelector(".belkatext").style.textDecoration = "line-through";
+			score=score+1;
+			document.querySelector(".score").innerHTML = score;
+		}
+	document.querySelector(".flower").onclick = function(){
+			alert("Нашел, молодец");
+			document.querySelector(".flower").style.display = "none";
+			document.querySelector(".flowertext").style.textDecoration = "line-through";
+			score=score+1;
+			document.querySelector(".score").innerHTML = score;
+		}
+		if(score == "4"){
+			alert("Ты побеждитель");
+		}
+
+</script>
+</html>
